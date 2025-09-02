@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Recipe Ideas Design System - Warm, appetizing food-themed colors */
+
+@layer base {
+  :root {
+    /* Base colors - warm, creamy background */
+    --background: 35 20% 98%;
+    --foreground: 25 25% 15%;
+
+    /* Card system - subtle warmth */
+    --card: 0 0% 100%;
+    --card-foreground: 25 25% 15%;
+
+    /* Popover system */
+    --popover: 0 0% 100%;
+    --popover-foreground: 25 25% 15%;
+
+    /* Primary - warm orange/amber for food theme */
+    --primary: 25 95% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-soft: 25 95% 65%;
+    --primary-glow: 25 95% 75%;
+
+    /* Secondary - soft green for fresh ingredients */
+    --secondary: 140 35% 92%;
+    --secondary-foreground: 140 85% 25%;
+
+    /* Muted tones */
+    --muted: 35 15% 95%;
+    --muted-foreground: 25 15% 45%;
+
+    /* Accent - vibrant green for CTAs */
+    --accent: 140 65% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Destructive states */
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders and inputs */
+    --border: 35 25% 88%;
+    --input: 35 25% 88%;
+    --ring: 25 95% 55%;
+
+    /* Gradients for appetizing visuals */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-soft)));
+    --gradient-warm: linear-gradient(180deg, hsl(var(--background)), hsl(35 15% 96%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(35 10% 98%));
+    
+    /* Shadows with warm tints */
+    --shadow-warm: 0 4px 20px -2px hsl(25 95% 55% / 0.15);
+    --shadow-card: 0 2px 8px -2px hsl(25 25% 50% / 0.1);
+    --shadow-elevated: 0 8px 32px -4px hsl(25 95% 55% / 0.2);
+
+    /* Animation variables */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --bounce-soft: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .dark {
+    /* Dark mode colors - warm, cozy theme */
+    --background: 25 25% 8%;
+    --foreground: 35 20% 95%;
+
+    --card: 25 20% 10%;
+    --card-foreground: 35 20% 95%;
+
+    --popover: 25 20% 10%;
+    --popover-foreground: 35 20% 95%;
+
+    --primary: 25 95% 65%;
+    --primary-foreground: 25 25% 8%;
+    --primary-soft: 25 95% 75%;
+    --primary-glow: 25 95% 85%;
+
+    --secondary: 25 15% 15%;
+    --secondary-foreground: 140 85% 85%;
+
+    --muted: 25 15% 12%;
+    --muted-foreground: 25 15% 65%;
+
+    --accent: 140 65% 55%;
+    --accent-foreground: 25 25% 8%;
+
+    --destructive: 0 75% 65%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 25 15% 18%;
+    --input: 25 15% 18%;
+    --ring: 25 95% 65%;
+
+    /* Dark gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-warm: linear-gradient(180deg, hsl(var(--background)), hsl(25 20% 6%));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(25 15% 8%));
+    
+    /* Dark shadows */
+    --shadow-warm: 0 4px 20px -2px hsl(0 0% 0% / 0.3);
+    --shadow-card: 0 2px 8px -2px hsl(0 0% 0% / 0.2);
+    --shadow-elevated: 0 8px 32px -4px hsl(0 0% 0% / 0.4);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
